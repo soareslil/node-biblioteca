@@ -2,12 +2,12 @@ import fs from 'fs';
 import chalk from 'chalk';
 
 
-function extraiLinks(texto){
-    const regex = /\[[^[\]]*?\]\(https?:\/\/[^\s?#.].[^\s]*\)/gm;
+function extraiLinks(texto) {
+    const regex = /\[([^[\]]*?)\]\((https?:\/\/[^\s?#.].[^\s]*)\)/gm;
     const capturas = [...texto.matchAll(regex)];
-   const resultados = capturas.map(captura => ({[captura[1]]: captura[2]}))
-   return resultados
-}
+    const resultados = capturas.map(captura => ({[captura[1]]: captura[2]}))
+    return resultados;
+  }
 
 // const capturas = regex.exec(texto);
 // const capturas = texto.match(texto);
