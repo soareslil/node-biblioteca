@@ -2,6 +2,7 @@ import fs from 'fs';
 import chalk from 'chalk';
 
 function trataErro(erro){
+    console.log(chalk.bgGreenBright(erro))
     throw new Error(chalk.red(erro.code, 'nao tem arquivos'));
 }
 
@@ -15,4 +16,5 @@ function pegaArquivo(caminhoDoArquivo){
     })
 }
 
-pegaArquivo('./arquivos/texto.md');
+
+pegaArquivo('./arquivos/textos.md');
